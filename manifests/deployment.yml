@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hyesampipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hyesampipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hyesampipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hyesampipelinesjavascriptdocker 
+          image: sundlsacr.azurecr.io/hyesampipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
